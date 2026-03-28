@@ -1,11 +1,16 @@
-*{
+:root {
+    --primary-color: #33569b;
+    --secondary-color: #213D77;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
+header {
     margin: 10px auto;
     width: 96vw;
     display: flex;
@@ -21,7 +26,7 @@ nav div:first-child {
     margin-bottom: 10px;
 }
 
-nav div:first-child span{
+nav div:first-child span {
     font-weight: 600;
 }
 
@@ -33,30 +38,31 @@ nav div:nth-child(2) {
     margin-bottom: 10px;
 }
 
-header button{
+header button {
     border: none;
-    background-color: #33569b;
+    background-color: var(--primary-color);
     padding: 10px 8px;
     color: #FFFFFF;
     font-weight: 500;
     cursor: pointer;
 }
 
-nav div:nth-child(2) > span:first-child, nav div:nth-child(2) > span:last-child {
+nav div:nth-child(2)>span:first-child,
+nav div:nth-child(2)>span:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-nav div:nth-child(2) > span:nth-child(2) {
+nav div:nth-child(2)>span:nth-child(2) {
     color: red;
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-main{
+main {
     background-image: url("./Images/homa-page-bg.jpg");
     background-position: right;
     background-repeat: no-repeat;
@@ -64,7 +70,114 @@ main{
     min-height: 38vw;
 }
 
-main section h1{
+main h1 {
     text-align: center;
-    color: #213D77;
+    color: var(--secondary-color);
+}
+
+main h1 span {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+main section {
+    border: none;
+    width: 420px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px 25px;
+}
+
+section>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+section a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px rgba(51, 86, 155, 0.4);
+}
+
+.form-actions {
+    margin-top: 10px;
+}
+
+.form-actions button {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-actions button:hover {
+    background-color: var(--secondary-color);
+}
+
+#error {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#loading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#results {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+header img {
+    height: 55px;
+}
+
+nav span {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+nav span:hover {
+    color: var(--primary-color);
 }
